@@ -6,7 +6,6 @@ and visual novels.
 
 ```
 Enter PHOEBE.
-/*
 ```
  
 A name (written in all caps) represents a semantic context within which to
@@ -14,10 +13,8 @@ evaluate functions & from which to produce data. New names are declared with
 `Enter`.
 
 ```
-*/
 PHOEBE
 What's your name?
-/*
 ```
 
 Normal `dialogue` syntax mimics [Fountain](https://fountain.io/), which I think
@@ -27,12 +24,10 @@ programmatic statements and will probably error. Plus, those scripts wouldn't
 do anything, anyway, so what's the point?
 
 ```
-*/
 PLAYER (read-formatted-from stdin)
 $GEFJON:name.
 
 Rename PLAYER to GEFJON.
-/*
 ```
 
 `read-formatted-from` is `IO T.Text -> FormatString s -> ScriptReader s` & is
@@ -43,11 +38,9 @@ This section asks the player what their name is, with the default being
 "Gefjon". It then updates the script, using the default name as a placeholder.
 
 ```
-/*
 Introduce hidden mood of PHOEBE called skepticism
     at 70
     of uint.
-*/
 ```
 
 Characters may have _moods_, which are variables of arbitrary types. They are
@@ -55,7 +48,6 @@ indexed with `-`, like `PHOEBE-sass`. This snippet introduces on,
 initializes it, and annotates its type.
 
 ```
-*/
 GEFJON (read-choose-1-of 3)
 
 (responds angry)
@@ -72,7 +64,6 @@ I know this must be kinda startling, but everything will be ok.
 ...sup? (increment PHOEBE-skepticism 80)
 PHOEBE
 Look, if you don't want to talk to me you don't have to. I can wait.
-/*
 ```
 
 This snippet introduces the player with three choices, which are offered to the
